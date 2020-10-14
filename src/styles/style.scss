@@ -1,0 +1,49 @@
+    body {
+        margin: 0 auto;
+    }
+
+    #app {
+        margin: 0;
+        text-align: center;
+    }
+
+    #title-style {
+        margin: 20px;
+    }
+
+    .colorRed {
+        color: red;
+    }
+
+    .line {
+        color: green;
+        text-decoration: line-through;
+    }
+
+    .endDiv {
+        p{
+        text-align: right;
+        font-size: 10px;
+        }
+    }
+
+img {
+    opacity: 0.2;
+}
+.card-body, .card-img-overlay, .card, .card-img, .image{
+    min-height: 250px;
+}
+.card-deck {
+    margin-bottom: 20px;
+}
+.card-img-overlay {
+    top:10%;
+    @media screen and(max-width: 420px){
+        top:0;
+    }
+}
+
+.component-style {
+    min-height: 300px;
+}
+

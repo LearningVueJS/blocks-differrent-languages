@@ -1,0 +1,15 @@
+{
+  "name": "doublelanguage",
+  "version": "1.0.0",
+  "description": "learning to create to blocks with different languages with vue-i18n",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juliana Melo",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.12",
+    "vue-i18n": "^8.22.0"
+  }
+}

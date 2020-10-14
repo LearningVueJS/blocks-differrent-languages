@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link type="text/css" rel="stylesheet" href="src/bootstrap/bootstrap-4.5.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./src/styles/style.css">
+
+
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="b-container">
+            <h1 id="title-style">A title that rocks !!</h1>
+            <b-container class="bv-example-row">
+                <b-row >
+                    <b-col class="column" sm="12" md="6" v-for="lang in langs" :key="lang.title"><password-check-template class="component-style":language='lang'></password-check-template>
+                </b-row>
+            </b-container>
+        </div>        
+              
+                    
+             
+    </div>
+
+    </script>
+    <script type="text-x-template" id="password-check-template">
+        <div>
+            <b-card-group deck  :class="'password-check-card'">
+            <b-card :class="'image'"
+                overlay
+                :img-src="background"
+                :img-alt="imageAlt"
+                text-variant="dark"
+                :title="title"
+                :sub-title="subtitle"
+            >
+                <b-card-text>
+                    <b-form>
+                        <b-input type="text" id="text-password" aria-describedby="password-help-block" v-model="password"></b-input>
+                        <b-form-text id="password-help-block">
+                            <p><span v-t="{path: 'into', locale: choseLocale($attrs.language)}"></span>: 
+                            <span :class="lineClass" v-t="{path: 'length', locale: choseLocale($attrs.language)}"></span>, <span :class="hasLowerCase" v-t="{path: 'lowercase', locale: choseLocale($attrs.language)}"></span>, 
+                            <span :class="hasUpperCase" v-t="{path: 'uppercase', locale: choseLocale($attrs.language)}"></span>, 
+                            <span :class="hasNumbers" v-t="{path: 'number', locale: choseLocale($attrs.language)}"></span>, 
+                            <span :class="hasSpecialCharacters" v-t="{path: 'special-character', locale: choseLocale($attrs.language)}"></span></p>
+                            <p :class="hasNoSpaces" v-t="{path: 'no-spaces', locale: choseLocale($attrs.language)}"></span>.</p>
+                            <div class="endDiv">
+                <p><span v-t="{path: 'image-from', locale: choseLocale($attrs.language)}"></span></p>
+            </div>
+                        </b-form-text>
+                    </b-form>
+                </b-card-text>
+            </b-card>
+            
+        </b-card-group>
+        
+        </div>
+    </script>
+
+    <!-- Required scripts -->
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+    <script src="node_modules/vue-i18n/dist/vue-i18n.js"></script>
+    <script src="./src/langs/language.vue"></script>
+    <script src="/src/app.vue"></script>
+</body>
+
+</html>
